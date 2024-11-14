@@ -3,7 +3,7 @@ name: air-quality-daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: '22 11 * * *'
+    - cron: '54 11 * * *'
 
 jobs:
   schedule_pipelines:
@@ -37,7 +37,7 @@ jobs:
           jupyter nbconvert --to notebook --execute 4_air_quality_batch_inference.ipynb
           echo "Finished executing notebooks."
           echo "Checking for files in docs/air-quality/assets/img/"
-          ls -la docs/air-quality/assets/img/
+          ls -la ../../docs/air-quality/assets/img/
 
       - name: github pages publish
         uses: stefanzweifel/git-auto-commit-action@v5
