@@ -3,7 +3,7 @@ name: air-quality-daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: '54 11 * * *'
+    - cron: '04 13 * * *'
 
 jobs:
   schedule_pipelines:
@@ -38,6 +38,9 @@ jobs:
           echo "Finished executing notebooks."
           echo "Checking for files in docs/air-quality/assets/img/"
           ls -la ../../docs/air-quality/assets/img/
+
+      - name: Verify modified files with git status
+        run: git status
 
       - name: github pages publish
         uses: stefanzweifel/git-auto-commit-action@v5
