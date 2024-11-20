@@ -4,6 +4,8 @@ This lab predicts pm25 values for St-eriksgatan, Stockholm, Sweden, based on wea
 [Expanded version](https://github.com/sthaji/mlfs-book/tree/main?fbclid=IwY2xjawGq3Z5leHRuA2FlbQIxMAABHReTVSV80f-auioj1kCr_Mr2yQ0hmc3nSs0uI4c0TVZVawtPo-rP7VQ0GA_aem_6pZ83v3ekp84AN7pLPeJww
 )
 
+Notebook 2 and 4 are run daily with the help of GitHub actions, getting todays pm25 and weather data at the sensor. Notebooks gather features and model from Hopsworks (API) to make predicitons. The data is gathered 6:11 AM.  
+
 Scripts:
 
     1_air_quality_feature_backfill.ipynb
